@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!--  created with free sitemap generation system www.sitemapxml.jp  --> 
+<url>
+  <loc>https://hrsn.jp/</loc>
+  <priority>1.0</priority>
+</url>
+<url>
+  <loc>https://hrsn.jp/contact.php?kbn=1</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://hrsn.jp/contact.php?kbn=2</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://hrsn.jp/concept.php</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://hrsn.jp/plan.php</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://hrsn.jp/news/</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://hrsn.jp/company.php</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://hrsn.jp/contact.php</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://hrsn.jp/catalog.php</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://hrsn.jp/news/archives/864</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://hrsn.jp/news/archives/862</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://hrsn.jp/news/archives/853</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://hrsn.jp/news/archives/846</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://hrsn.jp/news/archives/841</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://hrsn.jp/reform.php?kbn=1</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://hrsn.jp/reform.php?kbn=2</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://hrsn.jp/reform.php?kbn=3</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://hrsn.jp/reform.php?kbn=4</loc>
+  <priority>0.8</priority>
+</url>
+
+</urlset>

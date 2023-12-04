@@ -1,6 +1,9 @@
 # VS code
 .vscode/
 
+# WordPress
+/html/news/
+
 # Node_modules
 node_modules/
 package-lock.json
