@@ -1,6 +1,13 @@
 <?php include("inc/start.inc"); ?>
 <?php
 $kbn = getParameter("kbn", "1");
+
+if($kbn == "4") {
+	$url = 'https://hrsn.jp/ecocute/';
+	header('Location: ' . $url, true, 301);
+	exit;
+}
+
 $res = getContents("reform");
 $resData = json_decode($res, true);
 $list = $resData["list"];

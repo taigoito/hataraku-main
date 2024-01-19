@@ -1,0 +1,55 @@
+/**
+ * Footer
+ */
+
+.footer {
+  background-color: #F4F4F4;
+
+  &__inner {
+    @extend %__inner;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+  }
+
+  &__siteBrand {
+    flex: 1 1 16rem;
+    font-weight: 700;
+    font-size: 80%;
+    text-align: center;
+
+    & > img {
+      width: 14.4rem;
+    }
+  }
+
+  &__content {
+    flex: 2 2 36rem;
+    margin: 1.5rem 0;
+    padding: 0 3rem;
+    font-weight: 700;
+    font-size: 80%;
+  }
+
+  &__tel {
+    flex: 1 1 18rem;
+    text-align: center;
+
+    & > img {
+      width: 15rem;
+    }
+  }
+
+  &__copyright {
+    padding: 0.75rem 0;
+    background-color: $bodyBg;
+    font-family: "Noto Sans JP", sans-serif;
+    text-align: center;
+  }
+
+  img {
+    mix-blend-mode: multiply;
+  }
+}

@@ -1,0 +1,46 @@
+/**
+ * Intro
+ */
+
+$introBgHeight:  min(calc(25vw + 6.75rem), calc(13.5rem + 6.75rem));
+
+.intro {
+  margin-top: -6.75rem;
+
+  &__head {
+    height: $introBgHeight;
+    padding-top: 6.75rem;
+    background: url(./assets/images/flame00.jpg) no-repeat 50% 50% / cover scroll;
+  }
+
+  &__heading {
+    width: min(100%, 54rem);
+    margin: 0 auto;
+  }
+
+  &__body {
+    background-color: $primary;
+  }
+
+  &__container {
+    @extend %__inner;
+  }
+
+  &__featureIcons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: min(100%, 43.2rem);
+    margin: 0 auto;
+  }
+
+  &__featureIcon {
+    flex: 0 1 33.33%;
+  }
+
+  &__foot {
+    height: $introBgHeight;
+    background: url(./assets/images/flame01.jpg) no-repeat 50% 50% / cover scroll;
+  }
+}

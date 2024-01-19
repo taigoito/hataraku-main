@@ -1,0 +1,33 @@
+/**
+ * Floating Area
+ */
+
+.floatingArea {
+  position: sticky;
+  top: max(calc(100% - 13.5vw), calc(100% - 6.75rem));
+  left: 0;
+  right: 0;
+  z-index: 900;
+  width: min(100%, 50rem);
+  margin: auto;
+
+  &__banners {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__banner {
+    &:nth-child(1) {
+      width: 34%;
+    }
+
+    &:nth-child(2), &:nth-child(3) {
+      width: 30%;
+    }
+  }
+}

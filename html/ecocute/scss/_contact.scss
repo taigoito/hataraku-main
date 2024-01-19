@@ -1,0 +1,69 @@
+/*
+ * Contact
+ */
+
+.contact {
+  padding: 3rem 0;
+
+  #lpTop & {
+    margin-top: -13.5rem;
+    padding: 3rem 0 0;
+    background: url("./assets/images/flame02.png") no-repeat 0 2.5% / contain scroll;
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__bg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: calc(100% - min(9vw, 10.5rem));
+    background: #fba310;
+  }
+
+  &__container {
+    width: min(100%, 63rem);
+    margin: auto;
+    padding: 0 clamp(0.75rem, 2%, 1.5rem);
+    text-align: center;
+
+    #lpTop & {
+      padding-bottom: 9rem;
+    }
+  }
+
+  &__heading {
+    width: min(100%, 54rem);
+    margin: 0 auto;
+  }
+
+  &__form {
+    @include form();
+  }
+
+  &__formTable {
+    @include table();
+    text-align: left;
+  }
+
+  p {
+    width: min(100%, 48rem);
+    margin: 1.5rem auto;
+  }
+
+  &__buttons {
+    text-align: center;
+  }
+
+  [type="submit"] {
+    @include button(#08186e);
+  }
+
+  [type="button"], [type="reset"] {
+    @include button($primary);
+  }
+}

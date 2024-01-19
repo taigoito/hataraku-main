@@ -1,0 +1,67 @@
+// Table
+
+@mixin table() {
+  width: 100%;
+
+  @media (max-width: $breakpointSm - 0.1px) {
+    display: block;
+  }
+
+  thead, tbody {
+    width: 100%;
+
+    @media (max-width: $breakpointSm - 0.1px) {
+      display: block;
+    }
+  }
+
+  thead {
+    border: 0; // Reset
+  }
+
+  tr {
+    border-bottom: 6px solid #ffffff;
+
+    #lpTop & {
+      border-color: #fba310; // background color
+    }
+
+    &:nth-child(odd) {
+      background-color: #d6e5eb;
+    }
+
+    &:nth-child(even) {
+      background-color: #fee9db;
+    }
+
+    @media (max-width: $breakpointSm - 0.1px) {
+      display: block;
+    }
+  }
+
+  th, td {
+    border: 0; // Reset
+
+    @media (max-width: $breakpointSm - 0.1px) {
+      display: block;
+    }
+  }
+
+  th {
+    padding: 1.5rem 0.75rem 0.75rem;
+
+    @media (min-width: $breakpointSm) {
+      width: 30%;
+      padding: 1.5rem 2.25rem;
+    }
+  }
+
+  td {
+    padding: 0.75rem 0.75rem 1.5rem;
+
+    @media (min-width: $breakpointSm) {
+      width: 70%;
+      padding: 1.5rem 2.25rem;
+    }
+  }
+}

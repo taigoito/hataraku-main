@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>福井市密着のエコキュート専門店|はた楽</title>
+    <meta name="description" content="福井市のエコキュートは福井市密着のエコキュート専門店「はた楽」へお任せください！豊富なエコキュート在庫で最短即日交換可能！実績多数でスピード対応、工事費込み、即日交換でアフターフォローもしっかりだから安心！ご相談・見積無料！">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="../favicon.ico">
+  </head>
+  <body id="lpTop">
+    <header class="header">
+      <div class="header__inner">
+        <h1 class="header__siteBrand">
+          <a href="/">
+            <img src="./assets/images/logo_hataraku.jpg" alt="福井市密着のエコキュート専門店|はた楽">
+          </a>
+        </h1>
+        <nav class="header__nav">
+          <ul class="header__primaryMenu">
+            <li class="header__primaryMenuItem"><a href="#products">エコキュート商品一覧</a></li>
+            <li class="header__primaryMenuItem"><a href="#works">施工事例</a></li>
+            <li class="header__primaryMenuItem"><a href="#feature">私たちが選ばれる理由</a></li>
+            <li class="header__primaryMenuItem"><a href="#contact">お問い合わせ</a></li>
+          </ul>
+          <a class="header__tel" href="tel:0120-31-0502">
+            <img src="./assets/images/tel_hataraku.jpg">
+          </a>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="mainVisual">
+        <img src="./assets/images/main.jpg">
+      </div>
+      <div class="floatingArea">
+        <ul class="floatingArea__banners">
+          <li class="floatingArea__banner"><a href="tel:0120-31-0502"><img src="./assets/images/headBanner00.jpg"></a></li>
+          <li class="floatingArea__banner"><a href="https://line.me/R/ti/p/%40589flmja#~" target="_blank"><img src="./assets/images/headBanner01.jpg"></a></li>
+          <li class="floatingArea__banner"><a href="#contact"><img src="./assets/images/headBanner02.jpg"></a></li>
+        </ul>
+      </div>
+      <section class="intro">
+        <div class="intro__head">
+          <h2 class="intro__heading">
+            <img src="./assets/images/heading00.png">
+          </h2>
+        </div>
+        <div class="intro__body">
+          <div class="intro__container">
+            <div class="intro__featureIcons">
+              <figure class="intro__featureIcon">
+                <img src="./assets/images/featureIcon00.png">
+              </figure>
+              <figure class="intro__featureIcon">
+                <img src="./assets/images/featureIcon01.png">
+              </figure>
+              <figure class="intro__featureIcon">
+                <img src="./assets/images/featureIcon02.png">
+              </figure>
+              <figure class="intro__featureIcon">
+                <img src="./assets/images/featureIcon03.png">
+              </figure>
+              <figure class="intro__featureIcon">
+                <img src="./assets/images/featureIcon04.png">
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="intro__foot"></div>
+      </section>
+      <section id="products" class="products">
+        <ul class="products__items">
+          <li class="products__item" v-for="(product, i) in products">
+            <div class="products__itemHead">
+              <div class="products__itemLabels" v-if="product.rank == 0">
+                <div class="products__label --standard">給油専用</div>
+                <div class="products__label --number" v-html="product.labelNum"></div>
+                <div class="products__label --capacity" v-html="product.labelCapacity"></div>
+              </div>
+              <div class="products__itemLabels --basic" v-if="product.rank == 1">
+                <div class="products__label --basic"><span>フルオート<br>ベーシック</span>
+                  <div class="products__label --standard">給油</div>
+                  <div class="products__label --standard">追い焚き</div>
+                </div>
+                <div class="products__label --number" v-html="product.labelNum"></div>
+                <div class="products__label --capacity" v-html="product.labelCapacity"></div>
+              </div>
+              <div class="products__itemLabels --powerfull" v-if="product.rank == 2">
+                <div class="products__label --powerfull"><span>フルオート<br>パワフル</span>
+                  <div class="products__label --standard">給油</div>
+                  <div class="products__label --standard">追い焚き</div>
+                  <div class="products__label --standard">パワフル<br>高圧給油</div>
+                </div>
+                <div class="products__label --number" v-html="product.labelNum"></div>
+                <div class="products__label --capacity" v-html="product.labelCapacity"></div>
+              </div>
+              <div class="products__itemImage">
+                <img :src="`./assets/products/${product.imageUrl}`">
+              </div>
+              <h3 class="products__itemName" v-html="product.title"></h3>
+            </div>
+            <div class="products__itemFoot">
+              <div class="products__expenseItem">
+                <img src="./assets/images/expenseItem.png">
+              </div>
+              <div class="products__discount" v-if="product.price != 0">
+                <span>本体価格<br>より</span>
+                <span v-html="product.discount"></span>
+                <span>%<br>OFF</span>
+              </div>
+              <div class="products__discount" v-if="product.price == 0">
+                <span class="products__zubari">ズバリ</span>
+              </div> 
+              <div class="products__amountLabel">
+                <img src="./assets/images/labelGoodPriceSm.png">
+              </div>
+              <div class="products__amountPrice">
+                <span v-html="product.totalPrice1"></span><span v-html="product.totalPrice2"></span><span><span>万円</span><br>(税抜)</span>
+                <div><span v-html="product.totalPriceWithTax"></span>円(税込)</div>
+              </div>
+            </div>
+            <a class="products__view" :href="`./product/#${i + 1}`">この商品を詳しく見る</a>
+          </li>
+        </ul>
+      </section>
+      <section id="works" class="works">
+        <div class="works__head">
+          <h2 class="works__heading">
+            <img src="./assets/images/heading01.png">
+          </h2>
+        </div>
+        <div class="works__body">
+          <div class="slider" data-is-header="true" data-aspect-ratio="1.25" data-gap="72" data-interval="5000" data-duration="1000">
+            <div class="slider__inner">
+              <div class="slider__item">
+                <div class="works__item">
+                  <h3 class="works__title">
+                    <img class="works__label" src="./assets/images/labelCase01.png">
+                    <br>エコキュートからエコキュートへの取替
+                  </h3>
+                  <div class="works__images">
+                    <div class="works__before">
+                      <h5>施工前</h5>
+                      <figure>
+                        <img src="./assets/images/case01_before.jpg">
+                      </figure>
+                    </div>
+                    <figure class="works__chevron">
+                      <img src="./assets/images/chevronRightW.png">
+                    </figure>
+                    <div class="works__after">
+                      <h5>施工前</h5>
+                      <figure>
+                        <img src="./assets/images/case01_after.jpg">
+                      </figure>
+                    </div>
+                  </div>
+                  <table class="works__content">
+                    <tr class="works__place">
+                      <th>施工場所</th>
+                      <td>福井市糺町</td>
+                    </tr>
+                    <tr class="works__construct">
+                      <th>施工内容</th>
+                      <td>エコキュート交換</td>
+                    </tr>
+                    <tr class="works__amount">
+                      <th>参考価格</th>
+                      <td><span>377,000</span>円</td>
+                    </tr>
+                  </table>
+                  <p class="works__description">
+                    今回、「エコキュートのお湯が沸かせない」というお悩みがあるお客様に対し、「給湯専用でもお湯はりお知らせ機能が付いた、高圧給湯タイプのエコキュート」をご提案させていただきました。
+                    <br>「お風呂のお湯はり完了を音声で知らせてくれるので、閉め忘れがなくて助かります。ありがとうございました。」とのお声を頂き、当社としても大変うれしく思います。ありがとうございます！
+                  </p>
+                </div>
+              </div>
+              <div class="slider__item">
+                <div class="works__item">
+                  <h3 class="works__title">
+                    <img class="works__label" src="./assets/images/labelCase02.png">
+                    <br>電気温水器からエコキュートへの取替
+                  </h3>
+                  <div class="works__images">
+                    <div class="works__before">
+                      <h5>施工前</h5>
+                      <figure>
+                        <img src="./assets/images/case02_before.jpg">
+                      </figure>
+                    </div>
+                    <figure class="works__chevron">
+                      <img src="./assets/images/chevronRightW.png">
+                    </figure>
+                    <div class="works__after">
+                      <h5>施工前</h5>
+                      <figure>
+                        <img src="./assets/images/case02_after.jpg">
+                      </figure>
+                    </div>
+                  </div>
+                  <table class="works__content">
+                    <tr class="works__place">
+                      <th>施工場所</th>
+                      <td>福井市松本</td>
+                    </tr>
+                    <tr class="works__construct">
+                      <th>施工内容</th>
+                      <td>エコキュート交換</td>
+                    </tr>
+                    <tr class="works__amount">
+                      <th>参考価格</th>
+                      <td><span>431,000</span>円</td>
+                    </tr>
+                  </table>
+                  <p class="works__description">
+                    今回、「電気温水器の電気代が気になる」というお悩みがあるお客様に対し、「高圧タイプのフルオートのエコキュート」をご提案させていただきました。
+                    <br>エコキュートがご家族の使用パターンを学習し、1日に必要な湯量をかしこく沸き上げます。急なお客様など湯切れが起きそうなときは、自動的に沸き増し運転するので安心です。
+                  </p>
+                </div>
+              </div>
+              <div class="slider__item">
+                <div class="works__item">
+                  <h3 class="works__title">
+                    <img class="works__label" src="./assets/images/labelCase03.png">
+                    <br>石油給湯器からエコキュートへの取替
+                  </h3>
+                  <div class="works__images">
+                    <div class="works__before">
+                      <h5>施工前</h5>
+                      <figure>
+                        <img src="./assets/images/case03_before.jpg">
+                      </figure>
+                    </div>
+                    <figure class="works__chevron">
+                      <img src="./assets/images/chevronRightW.png">
+                    </figure>
+                    <div class="works__after">
+                      <h5>施工前</h5>
+                      <figure>
+                        <img src="./assets/images/case03_after.jpg">
+                      </figure>
+                    </div>
+                  </div>
+                  <table class="works__content">
+                    <tr class="works__place">
+                      <th>施工場所</th>
+                      <td>福井市文京</td>
+                    </tr>
+                    <tr class="works__construct">
+                      <th>施工内容</th>
+                      <td>エコキュート交換</td>
+                    </tr>
+                    <tr class="works__amount">
+                      <th>参考価格</th>
+                      <td><span>517,000</span>円</td>
+                    </tr>
+                  </table>
+                  <p class="works__description">
+                    今回、「灯油価格も高いので、光熱費が節約できるエコキュートに替えたい」というお悩みがあるお客様に対し、「シンプルに操作できる給湯専用タイプのエコキュート」をご提案させていただきました。
+                    <br>「エコキュートは初めてですが、蛇口からお風呂の湯はりをするタイプなので、簡単で使いやすいです。ありがとうございました。」とのお声を頂き、当社としても大変うれしく思います。
+                  </p>
+                </div>
+              </div>
+              <div class="slider__item">
+                <div class="works__item">
+                  <h3 class="works__title">
+                    <img class="works__label" src="./assets/images/labelCase04.png">
+                    <br>エコキュートからエコキュートへの取替
+                  </h3>
+                  <div class="works__images">
+                    <div class="works__before">
+                      <h5>施工前</h5>
+                      <figure>
+                        <img src="./assets/images/case04_before.jpg">
+                      </figure>
+                    </div>
+                    <figure class="works__chevron">
+                      <img src="./assets/images/chevronRightW.png">
+                    </figure>
+                    <div class="works__after">
+                      <h5>施工前</h5>
+                      <figure>
+                        <img src="./assets/images/case04_after.jpg">
+                      </figure>
+                    </div>
+                  </div>
+                  <table class="works__content">
+                    <tr class="works__place">
+                      <th>施工場所</th>
+                      <td>福井市二の宮</td>
+                    </tr>
+                    <tr class="works__construct">
+                      <th>施工内容</th>
+                      <td>エコキュート交換</td>
+                    </tr>
+                    <tr class="works__amount">
+                      <th>参考価格</th>
+                      <td><span>467,000</span>円</td>
+                    </tr>
+                  </table>
+                  <p class="works__description">
+                    今回、「リモコン画面が真っ暗で、ぬるいお湯しか出ない」というお悩みがあるお客様に対し、「高圧タイプのフルオートのエコキュート」をご提案させていただきました。
+                    <br>リフォーム前より高圧給湯なので、キッチンで洗い物をしていても、シャワーが快適に使えます。
+                  </p>
+                </div>
+              </div>
+              <div class="slider__item">
+                <div class="works__item">
+                  <h3 class="works__title">
+                    <img class="works__label" src="./assets/images/labelCase05.png">
+                    <br>エコキュートからエコキュートへの取替
+                  </h3>
+                  <div class="works__images">
+                    <div class="works__before">
+                      <h5>施工前</h5>
+                      <figure>
+                        <img src="./assets/images/case05_before.jpg">
+                      </figure>
+                    </div>
+                    <figure class="works__chevron">
+                      <img src="./assets/images/chevronRightW.png">
+                    </figure>
+                    <div class="works__after">
+                      <h5>施工前</h5>
+                      <figure>
+                        <img src="./assets/images/case05_after.jpg">
+                      </figure>
+                    </div>
+                  </div>
+                  <table class="works__content">
+                    <tr class="works__place">
+                      <th>施工場所</th>
+                      <td>福井市</td>
+                    </tr>
+                    <tr class="works__construct">
+                      <th>施工内容</th>
+                      <td>エコキュート交換</td>
+                    </tr>
+                    <tr class="works__amount">
+                      <th>参考価格</th>
+                      <td><span>550,000</span>円</td>
+                    </tr>
+                  </table>
+                  <p class="works__description">
+                    今回、「エコキュートのお湯が出ない」というお悩みがあるお客様に対し、「お湯はりから全て自動、追いだきもできるフルオートタイプ」で、「高圧でパワフル＆快適なエコキュート」をご提案させていただきました。
+                    <br>「追いだきが簡単で、湯はり時間も早くて使いやすいです！ありがとうございました。」とのお声を頂き、当社としても大変うれしく思います。ありがとうございます！
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="works__foot"></div>
+      </section>
+      <section id="feature" class="feature">
+        <div class="feature__inner">
+          <h2 class="feature__heading">
+            <img src="./assets/images/heading02.png">
+          </h2>
+          <div class="feature__contents">
+            <div class="feature__content">
+              <div class="feature__contentInner">
+                <figure class="feature__contentLabel">
+                  <img src="./assets/images/labelReason01.png">
+                </figure>
+                <h3 class="feature__contentHeadline">
+                  <img src="./assets/images/featureHead00.png">
+                </h3>
+                <p class="feature__contentText">
+                  エコキュートを交換する時、業者様によっては、お見積り提出後に値段が変わることがあります。はた楽では、自社専属のスタッフがお取り付けいたしますので、お見積り提出後に値段が変わることはありません。安心してお任せください！
+                </p>
+              </div>
+            </div>
+            <div class="feature__content">
+              <div class="feature__contentInner">
+                <figure class="feature__contentLabel">
+                  <img src="./assets/images/labelReason02.png">
+                </figure>
+                <h3 class="feature__contentHeadline">
+                  <img src="./assets/images/featureHead01.png">
+                </h3>
+                <p class="feature__contentText">
+                  エコキュートを取り付けできる業者は、意外と遠方から来ていることも少なくありません。はた楽では、1969年の創業以来、福井市に根付いて設備工事を行ってきました。そのため、設置後に「お湯の出がおかしい」と不調が現れても、すぐに飛んで行って責任をもって対応いたします！
+                </p>
+              </div>
+            </div>
+            <div class="feature__content">
+              <div class="feature__contentInner">
+                <figure class="feature__contentLabel">
+                  <img src="./assets/images/labelReason03.png">
+                </figure>
+                <h3 class="feature__contentHeadline">
+                  <img src="./assets/images/featureHead02.png">
+                </h3>
+                <p class="feature__contentText">
+                  はた楽が取り扱うエコキュートは、メーカーの正規品と決めています。安心して長く使っていただきたいから。1969年の創業以来の実績で、エコキュートを安く仕入れたり、施工できたりすることができるようになり、メーカー正規品でも、いつでも極安価格を実現できます！
+                </p>
+              </div>
+            </div>
+            <div class="feature__content">
+              <div class="feature__contentInner">
+                <figure class="feature__contentLabel">
+                  <img src="./assets/images/labelReason04.png">
+                </figure>
+                <h3 class="feature__contentHeadline">
+                  <img src="./assets/images/featureHead03.png">
+                </h3>
+                <p class="feature__contentText">
+                  はた楽では、エコキュートを交換する時、必ず自社で施工することを決めています。なぜなら、外注の職人さんに依頼するよりも安く、しかも高品質で施工できるからです。その分お客様に還元できると考えているからです。エコキュートを検討されている方は、自社施工の業者様を視野に入れていただくと満足のいくリフォームができますよ！
+                </p>
+              </div>
+            </div>
+            <div class="feature__content">
+              <div class="feature__contentInner">
+                <figure class="feature__contentLabel">
+                  <img src="./assets/images/labelReason05.png">
+                </figure>
+                <h3 class="feature__contentHeadline">
+                  <img src="./assets/images/featureHead04.png">
+                </h3>
+                <p class="feature__contentText">
+                  はた楽では、施工後の安心を最も重要視しています。福井市の皆様にずっと安心をお届けしたいから。だから、弊社では独自の工事保証を設けています。やりっぱなしは絶対にしない、地域の安心できる業者として、施工後の不調があればすぐに飛んでいきます！
+                </p>
+              </div>
+            </div>
+            <div class="feature__content">
+              <div class="feature__contentInner">
+                <figure class="feature__contentLabel">
+                  <img src="./assets/images/labelReason06.png">
+                </figure>
+                <h3 class="feature__contentHeadline">
+                  <img src="./assets/images/featureHead05.png">
+                </h3>
+                <p class="feature__contentText">
+                  はた楽のエコキュートは、商品保証も充実！最大10年間の商品延長保証を用意しています！1969年の創業以来の実績で保証料も格安でご用意できるようになりました！保証をご検討の方は一度はた楽にご相談ください！
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="contact">
+        <div class="contact__inner">
+          <div class="contact__container">
+            <h2 class="contact__heading">
+              <img src="./assets/images/heading03.png">
+            </h2>
+            <form class="contact__form" method="post" action="./php/mail.php">
+              <table class="contact__formTable">
+                <tr>
+                  <th><label for="yoursubject"><span class="required">必須</span>お問い合わせ内容</label></th>
+                  <td>
+                    <select id="yoursubject" name="お問い合わせ内容">
+                      <option value="エコキュートリフォームについて">エコキュートリフォームについて</option>
+                      <option value="その他">その他</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th><label for="yourname"><span class="required">必須</span>お名前</label></th>
+                  <td><input id="yourname" size="30" type="text" name="お名前"></td>
+                </tr>
+                <tr>
+                  <th><label for="yourtel"><span class="required">必須</span>電話番号</label></th>
+                  <td><input id="yourtel" size="30" type="tel" name="電話番号"></td>
+                </tr>
+                <tr>
+                  <th><label for="youremail">メールアドレス</label></th>
+                  <td><input id="youremail" size="30" type="email" name="Email"></td>
+                </tr>
+                <tr>
+                  <th><label for="yourcontent">お問い合わせ内容<br>及びその他</label></th>
+                  <td><textarea id="yourcontent" name="お問い合わせ内容及びその他" cols="30" rows="6"></textarea></td>
+                </tr>
+              </table>
+              <p>本入力フォームおよびメールでご連絡頂きましたお客さまの個人情報につきましては、厳重に管理を行っております。 法令などに基づき正規の手続きによって司法捜査機関による開示要求が行われた場合を除き、第三者に開示もしくは提供することはございません。</p>
+              <div class="contact__buttons">
+                <input type="submit" value="確認">
+              </div>
+            </form>
+          </div>
+          <div class="contact__bg"></div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__siteBrand">
+          <img src="./assets/images/logo_hataraku.jpg">
+          <br>〒910-0028 福井県福井市学園3丁目2-17
+        </div>
+        <div class="footer__content">
+          <p>福井県福井市でエコキュートをお考えの方へ。
+            <br>「はた楽」は信頼度NO.1を目指す地域密着型リフォーム専門店です。
+            <br>エコキュートなら「はた楽」にお任せください。
+            <br>ご来店予約&無料お見積りも受付中です。</p>
+        </div>
+        <div class="footer__tel">
+          <img src="./assets/images/tel_hataraku.jpg">
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <small>Copyright &copy; はた楽 All rights reserved.</small>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./init.js"></script>
+  </body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>福井市密着のエコキュート専門店|はた楽</title>
+    <meta name="description" content="福井市のエコキュートは福井市密着のエコキュート専門店「はた楽」へお任せください！豊富なエコキュート在庫で最短即日交換可能！実績多数でスピード対応、工事費込み、即日交換でアフターフォローもしっかりだから安心！ご相談・見積無料！">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../../favicon.ico">
+  </head>
+  <body id="lpSub">
+    <header class="header">
+      <div class="header__inner">
+        <h1 class="header__siteBrand">
+          <a href="/">
+            <img src="../assets/images/logo_hataraku.jpg" alt="福井市密着のエコキュート専門店|はた楽">
+          </a>
+        </h1>
+        <nav class="header__nav">
+          <ul class="header__primaryMenu">
+            <li class="header__primaryMenuItem"><a href="../#products">エコキュート商品一覧</a></li>
+            <li class="header__primaryMenuItem"><a href="../#works">施工事例</a></li>
+            <li class="header__primaryMenuItem"><a href="../#feature">私たちが選ばれる理由</a></li>
+            <li class="header__primaryMenuItem"><a href="../#contact">お問い合わせ</a></li>
+          </ul>
+          <a class="header__tel" href="tel:0120-31-0502">
+            <img src="../assets/images/tel_hataraku.jpg">
+          </a>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <section id="product" class="product">
+        <div class="product__head"></div>
+        <div class="product__body">
+          <div class="product__container">
+            <ul class="product__breadcrumb">
+              <li class="product__breadcrumbItem"><a href="/">TOP</a></li>
+              <li class="product__breadcrumbItem"><a href="/ecocute/">エコキュート</a></li>
+              <li class="product__breadcrumbItem" v-html="product.title"></li>
+            </ul>
+            <div class="product__main">
+              <div class="product__image">
+                <img :src="`../assets/products/${product.imageUrl}`">
+              </div>
+              <div class="product__content">
+                <h2 class="product__name" v-html="product.title"></h2>
+                <h3 class="product__lead" v-html="product.lead"></h3>
+                <p class="product__description" v-html="product.description"></p>
+                <div class="product__info">
+                  <div class="product__discount" v-if="product.price != 0">
+                    <span>本体価格<br>より</span>
+                    <span v-html="product.discount"></span>
+                    <span>%<br>OFF</span>
+                  </div>
+                  <div class="product__discount" v-if="product.price == 0">
+                    <span class="product__zubari">ズバリ</span>
+                  </div> 
+                  <div class="product__prices">
+                    <div class="product__unitprice">
+                      <span>商品代金</span><span v-html="product.salePrice"></span>円(税抜)
+                    </div>
+                    <div class="product__unitprice">
+                      <span>工事費</span><span v-html="product.commission"></span>円(税抜)
+                    </div>
+                  </div>
+                </div>
+                <div class="product__amount">
+                  <div class="product__amountLabel">
+                    <img src="../assets/images/labelGoodPrice.png">
+                    <br><small>※脚部カバーは別途</small>
+                  </div>
+                  <div class="product__amountPrice">
+                    <span v-html="product.totalPrice1"></span><span v-html="product.totalPrice2"></span><span><span>万円</span><br>(税抜)</span>
+                    <div><span v-html="product.totalPriceWithTax"></span>円(税込)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product__sub">
+              <div class="product__subInner">
+                <div class="product__spec --spec_1">
+                  <h3 class="product__subHeading">エコキュートを交換するなら
+                    <br>必ず欲しいイマドキ基本機能</h3>
+                  <table class="product__specTable">
+                    <thead>
+                      <tr>
+                        <th>お湯はり</th>
+                        <th>保温</th>
+                        <th>たし湯</th>
+                        <th>追い焚</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><img :src="product.spec1"><br><span v-html="product.note1"></span></td>
+                        <td><img :src="product.spec2"><br><span v-html="product.note2"></span></td>
+                        <td><img :src="product.spec3"><br><span v-html="product.note3"></span></td>
+                        <td><img :src="product.spec4"><br><span v-html="product.note4"></span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="product__spec --spec_2">
+                  <h3 class="product__subHeading">お風呂を快適に
+                    <br>過ごしたい方！</h3>
+                  <table class="product__specTable">
+                    <thead>
+                      <tr>
+                        <th>ふろ予約</th>
+                        <th>給湯圧力</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><img :src="product.spec5"><br><span v-html="product.note5"></span></td>
+                        <td><img :src="product.spec6"><br><span v-html="product.note6"></span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="product__spec --spec_3">
+                  <h3 class="product__subHeading">自動機能で便利に！
+                    <br>除菌機能</h3>
+                  <table class="product__specTable">
+                    <thead>
+                      <tr>
+                        <th>自動ふろ配管洗浄</th>
+                        <th>除菌・防臭</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><img :src="product.spec7"><br><span v-html="product.note7"></span></td>
+                        <td><img :src="product.spec8"><br><span v-html="product.note8"></span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product__foot"></div>
+      </section>
+      <section id="contact" class="contact">
+        <div class="contact__inner">
+          <div class="contact__container">
+            <form class="contact__form" method="post" action="../php/mail.php">
+              <table class="contact__formTable">
+                <tr>
+                  <th><label for="yoursubject"><span class="required">必須</span>お問い合わせ内容</label></th>
+                  <td>
+                    <select id="yoursubject" name="お問い合わせ内容">
+                      <option value="エコキュートリフォームについて">エコキュートリフォームについて</option>
+                      <option value="その他">その他</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th><label for="yourname"><span class="required">必須</span>お名前</label></th>
+                  <td><input id="yourname" size="30" type="text" name="お名前"></td>
+                </tr>
+                <tr>
+                  <th><label for="yourtel"><span class="required">必須</span>電話番号</label></th>
+                  <td><input id="yourtel" size="30" type="tel" name="電話番号"></td>
+                </tr>
+                <tr>
+                  <th><label for="youremail">メールアドレス</label></th>
+                  <td><input id="youremail" size="30" type="email" name="Email"></td>
+                </tr>
+                <tr>
+                  <th><label for="yourcontent">お問い合わせ内容<br>及びその他</label></th>
+                  <td><textarea id="yourcontent" name="お問い合わせ内容及びその他" cols="30" rows="6"></textarea></td>
+                </tr>
+              </table>
+              <p>本入力フォームおよびメールでご連絡頂きましたお客さまの個人情報につきましては、厳重に管理を行っております。 法令などに基づき正規の手続きによって司法捜査機関による開示要求が行われた場合を除き、第三者に開示もしくは提供することはございません。</p>
+              <div class="contact__buttons">
+                <input type="submit" value="確認">
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__siteBrand">
+          <img src="../assets/images/logo_hataraku.jpg">
+          <br>〒910-0028 福井県福井市学園3丁目2-17
+        </div>
+        <div class="footer__content">
+          <p>福井県福井市でエコキュートをお考えの方へ。
+            <br>「はた楽」は信頼度NO.1を目指す地域密着型リフォーム専門店です。
+            <br>エコキュートなら「はた楽」にお任せください。
+            <br>ご来店予約&無料お見積りも受付中です。</p>
+        </div>
+        <div class="footer__tel">
+          <img src="../assets/images/tel_hataraku.jpg">
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <small>Copyright &copy; はた楽 All rights reserved.</small>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../init.js"></script>
+  </body>
+</html>

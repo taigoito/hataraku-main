@@ -1,0 +1,63 @@
+/**
+ * Feature
+ */
+
+.feature {
+  position: relative;
+  z-index: -10;
+  padding-top: 6.75rem;
+  padding-bottom: 13.5rem;
+  background-image: linear-gradient(0deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px)),linear-gradient(90deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px));
+  background-size: 16px 16px;
+  background-repeat: repeat;
+  background-position: center center;
+
+  &__inner {
+    @extend %__inner;
+  }
+
+  &__heading {
+    width: min(100%, 54rem);
+    margin: 0 auto;
+  }
+
+  &__contents {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  &__content {
+    display: flex;
+    flex: 0 0 50%;
+    padding: 0 0.75rem 1.5rem;
+
+    @media(min-width: $breakpointLg) {
+      flex: 0 0 33.33%;
+    }
+  }
+
+  &__contentInner {
+    padding: 0.5rem 0;
+    background-color: #d6e5eb;
+  }
+
+  &__contentLabel {
+    position: relative;
+    top: 0.75rem;
+    left: -0.75rem;
+    z-index: 1;
+    width: min(27vw, 9rem);
+  }
+
+  &__contentHeadline,
+  &__contentText {
+    padding: 0 1rem;
+    font-weight: 700;
+    font-size: min(2.4vw, 1rem);
+    text-align: justify;
+
+    @media(min-width: $breakpointSm) {
+      padding: 0 1.5rem;
+    }
+  }
+}
