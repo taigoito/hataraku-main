@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>福井市密着のエコキュート専門店|はた楽</title>
     <meta name="description" content="福井市のエコキュートは福井市密着のエコキュート専門店「はた楽」へお任せください！豊富なエコキュート在庫で最短即日交換可能！実績多数でスピード対応、工事費込み、即日交換でアフターフォローもしっかりだから安心！ご相談・見積無料！">
@@ -78,13 +77,13 @@
           <li class="products__item" v-for="(product, i) in products">
             <div class="products__itemHead">
               <div class="products__itemLabels" v-if="product.rank == 0">
-                <div class="products__label --standard">給油専用</div>
+                <div class="products__label --standard">給湯専用</div>
                 <div class="products__label --number" v-html="product.labelNum"></div>
                 <div class="products__label --capacity" v-html="product.labelCapacity"></div>
               </div>
               <div class="products__itemLabels --basic" v-if="product.rank == 1">
                 <div class="products__label --basic"><span>フルオート<br>ベーシック</span>
-                  <div class="products__label --standard">給油</div>
+                  <div class="products__label --standard">給湯</div>
                   <div class="products__label --standard">追い焚き</div>
                 </div>
                 <div class="products__label --number" v-html="product.labelNum"></div>
@@ -92,9 +91,9 @@
               </div>
               <div class="products__itemLabels --powerfull" v-if="product.rank == 2">
                 <div class="products__label --powerfull"><span>フルオート<br>パワフル</span>
-                  <div class="products__label --standard">給油</div>
+                  <div class="products__label --standard">給湯</div>
                   <div class="products__label --standard">追い焚き</div>
-                  <div class="products__label --standard">パワフル<br>高圧給油</div>
+                  <div class="products__label --standard">パワフル<br>高圧給湯</div>
                 </div>
                 <div class="products__label --number" v-html="product.labelNum"></div>
                 <div class="products__label --capacity" v-html="product.labelCapacity"></div>
