@@ -18,7 +18,7 @@ $subItems = [];
 $subItems["reform?kbn=1"]	= "キッチンリフォーム";
 $subItems["reform?kbn=2"]	= "浴室リフォーム";
 $subItems["reform?kbn=3"]	= "トイレリフォーム";
-$subItems["reform?kbn=4"]	= "給湯器交換";
+$subItems["reform?kbn=4"]	= "エコキュート交換";
 $items["sub"]				= $subItems;
 $menuList[] = $items;
 
