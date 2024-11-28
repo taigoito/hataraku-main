@@ -132,6 +132,11 @@ button, input, select, textarea {
     margin: 2.25rem auto;
   }
 }
+.mainVisual iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
 
 /**
  * Floating Area

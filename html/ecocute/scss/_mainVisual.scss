@@ -9,4 +9,10 @@
   @media (min-width: $breakpointLg) {
     margin: 2.25rem auto;
   }
+
+  iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
 }
