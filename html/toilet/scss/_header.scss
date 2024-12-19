@@ -1,0 +1,114 @@
+/*
+ * Header
+ */
+
+.header {
+  padding-top: 0.75rem;
+
+  &__inner {
+    @extend %__inner;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__siteBrand {
+    flex: 0 1 12rem;
+    margin: 0;
+  }
+
+  &__buttons {
+    list-style: none;
+    display: none;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 1 33.75rem;
+    margin: 0;
+    padding: 0;
+
+    @media (min-width: $breakpointLg) {
+      display: flex;
+    }
+  }
+
+  &__buttonWrap {
+    flex: 0 1 33.33%;
+  }
+
+  &__button {
+    display: block;
+    height: 3.75rem;
+
+    &.--line {
+      background: url("./assets/images/line01.png") no-repeat 50% 50% / contain scroll;
+
+      &:hover {
+        background-image: url("./assets/images/line01_mo.png");
+      }
+    }
+
+    &.--mitsumori {
+      background: url("./assets/images/mitsumori01.png") no-repeat 50% 50% / contain scroll;
+
+      &:hover {
+        background-image: url("./assets/images/mitsumori01_mo.png");
+      }
+    }
+
+    &.--raiten {
+      background: url("./assets/images/raiten01.png") no-repeat 50% 50% / contain scroll;
+
+      &:hover {
+        background-image: url("./assets/images/raiten01_mo.png");
+      }
+    }
+  }
+
+  &__tel {
+    display: none;
+    flex: 0 1 13.5rem;
+
+    @media (min-width: $breakpointLg) {
+      display: block;
+    }
+  }
+
+  &__nav {
+    background-color: #000066;
+  }
+
+  &__primaryMenu {
+    @extend %__inner;
+    display: none;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0; // 打消し
+
+    @media (min-width: $breakpointLg) {
+      display: flex;
+    }
+  }
+
+  &__primaryMenuItem {
+    flex: 0 1 20%;
+    border-right: 1px solid #39468b;
+
+    &:first-child {
+      border-left: 1px solid #39468b;
+    }
+
+    a {
+      display: block;
+      padding: 0.75rem;
+      color: #fff;
+      text-align: center;
+
+      &:hover {
+        background-color: #39468b;
+      }
+    }
+  }
+}

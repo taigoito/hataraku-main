@@ -1,0 +1,32 @@
+/*
+ * Flow
+ */
+
+.flow {
+  @extend %__section;
+  background-color: #fa6400;
+
+  &__inner {
+    @extend %__inner;
+  }
+
+  &__heading {
+    @extend %__heading;
+    margin-top: 0;
+    color: #ffffff;
+
+    &::after {
+      background-color: #ffffff;
+    }
+  }
+
+  &__desc {
+    color: #ffffff;
+    font-size: 1.25rem;
+    text-align: center;
+
+    span {
+      display: inline-block;
+    }
+  }
+}

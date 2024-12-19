@@ -1,0 +1,229 @@
+/*
+ * Products
+ */
+
+.products {
+  @extend %__section;
+
+  &__inner {
+    @extend %__inner;
+  }
+
+  &__heading {
+    @extend %__heading;
+  }
+
+  &__menu {
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 3rem auto;
+    padding: 0;
+  }
+
+  &__menuItem {
+    flex: 0 1 15rem;
+
+    a {
+      display: block;
+      padding: 1.25rem 0;
+      border-radius: 0.25rem;
+      background-color: #4c45c2;
+      box-shadow: 0 0.375rem 0 0 #08186e;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 1.2;
+      text-align: center;
+
+      &:hover {
+        box-shadow: none;
+        transform: translateY(0.375rem);
+      }
+    }
+  }
+
+  &__subheading {
+    display: block;
+    width: min(100%, 31.5rem);
+    margin: 1.5rem auto;
+    padding: 1.25rem 0;
+    border-radius: 0.25rem;
+    background-color: #4c45c2;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    text-align: center;
+
+    @media (min-width: $breakpointMd) {
+      width: 100%;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    width: min(100%, 31.5rem);
+    margin: 1.5rem auto;
+    padding: 0;
+
+    @media (min-width: $breakpointMd) { 
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: stretch;
+      gap: 2%;
+      width: 100%;
+    }
+  }
+
+  &__listItem {
+    margin-bottom: 0.75rem;
+    border: 1px solid #7c7c7c;
+    border-radius: 0.375rem;
+
+    @media (min-width: $breakpointMd) {
+      flex: 0 1 49%
+    }
+  }
+
+  &__itemHeader {
+    padding: 1.25rem;
+    background-color: #7c7c7c;
+  }
+
+  &__itemName {
+    margin: 0;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+
+  &__itemBody {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    font-weight: 700;
+  }
+
+  &__itemDesc {
+    flex: 1 1 42.5%;
+  }
+
+  &__itemPrice {
+    flex: 1 1 57.5%;
+  }
+
+  &__itemImage {
+    display: block;
+    width: clamp(6.75rem, 87.5%, 9rem);
+    margin: 0.375rem auto;
+  }
+
+  &__contentHeadline {
+    height: 1.5rem;
+    margin: 0 0 0.375rem;
+    border-radius: 1.5rem;
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    text-align: center;
+
+    &.--feature {
+      background-color: #4c45c2;
+    }
+
+    &.--price {
+      background-color: #fa6400;
+    }
+  }
+
+  &__featureList {
+    list-style: none;
+    padding: 0;
+    font-size: 0.875rem;
+  }
+
+  &__priceTable {
+    width: 100%;
+    font-size: 0.875rem;
+
+    tr:nth-child(2) {
+      letter-spacing: -0.125rem;
+    }
+
+    td:nth-child(2) {
+      text-align: right;
+    }
+  }
+
+  &__itemOffPrice, &__itemDefaultPrice {
+    color: #d80000;
+  }
+
+  &__zubari {
+    display: block;
+    width: 6rem;
+    margin: 0 auto;
+  }
+
+  &__comicomikakaku {
+    display: block;
+    width: clamp(10.5rem, 87.5%, 13.5rem);
+    margin: 0.75rem auto 0;
+  }
+
+  &__price {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: -0.75rem;
+    padding-right: 0.75rem;
+    font-size: 1.5rem;
+  }
+
+  &__priceNum1 {
+    display: inline-block;
+    color: #d80000;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    font-size: 300%;
+    transform: translateY(0.25rem);
+  }
+
+  &__priceNum2 {
+    display: inline-block;
+    color: #d80000;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    font-size: 200%;
+  }
+
+  &__priceUnit {
+    margin-left: 0.25rem;
+    font-size: 75%;
+
+    &> span:nth-of-type(1) {
+      font-size: 80%;
+    }
+  }
+
+  &__button {
+    display: block;
+    margin: 0.375rem;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    background-color: #08186e;
+    color: #ffffff;
+    font-size: 0.75rem;
+    text-align: center;
+  }
+}

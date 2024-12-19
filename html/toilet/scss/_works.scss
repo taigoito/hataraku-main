@@ -1,0 +1,120 @@
+/*
+ * Works
+ */
+
+.works {
+  @extend %__section;
+
+  &__inner {
+    @extend %__inner;
+  }
+
+  &__heading {
+    width: min(100%, 31.5rem);
+    margin: 1.5rem auto;
+    border-top: 1.5rem solid #fff104;
+    border-bottom: 1.5rem solid #fff104;
+    border-radius: 0.25rem;
+    color: #08186e;
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 1.2;
+    text-align: center;
+
+    @media (min-width: $breakpointMd) {
+      width: 100%;
+    }
+  }
+
+  &__cases {
+    list-style: none;
+    width: min(100%, 31.5rem);
+    margin: 1.5rem auto;
+    padding: 0;
+
+    @media (min-width: $breakpointMd) { 
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2%;
+      width: 100%;
+    }
+  }
+
+  &__case {
+    margin-bottom: 0.75rem;
+    border: 1px solid #bababa;
+    border-radius: 0.375rem;
+
+    @media (min-width: $breakpointMd) {
+      flex: 0 1 49%
+    }
+  }
+
+  &__caseHeader {
+    padding: 1.25rem;
+    background-color: #ededed;
+  }
+
+  &__caseSample {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  &__caseBody {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  &__caseImage {
+    display: block;
+    flex: 0 1 12rem; // 12remを基準に縮小のみ
+
+    img {
+      width: 100%;
+      height: fit-content;
+      aspect-ratio: 3 / 4;
+    }
+  }
+
+  &__caseContent {
+    flex: 1 0 12rem; // 12remを基準に伸長のみ
+  }
+
+  &__caseDate {
+    margin-bottom: 0.375rem;
+    font-size: 0.75rem;
+  }
+
+  &__caseName {
+    margin: 0 0 0.75rem;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
+  &__caseDesc {
+    margin-bottom: 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  &__casePrice {
+    margin-left: 3rem;
+    font-weight: 700;
+    font-size: 0.75rem;
+  }
+
+  &__casePriceMain {
+    color: #d80000;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+    font-size: 300%;
+  }
+}

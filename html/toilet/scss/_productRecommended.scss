@@ -1,0 +1,53 @@
+/*
+ * Product Recommended
+ */
+
+.productRecommended {
+  @extend %__section;
+
+  &__inner {
+    @extend %__inner;
+  }
+
+  &__heading {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    background-color: #4c45c2;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__image {
+    flex: 0 0 10.5rem;
+  }
+
+  &__list {
+    list-style: none;
+    flex: 0 0 auto;
+    padding-left: 1.5rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+
+  &__listItem {
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 3rem;
+      height: 3rem;
+      margin-right: 0.75rem;
+      background: url("./assets/images/check.png") no-repeat 50% 50% / contain scroll;
+      vertical-align: middle;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+/*
+ * Comicomi Kakaku
+ */
+
+.comicomikakaku {
+  background-color: #08186e;
+
+  &__inner {
+    @extend %__inner;
+    padding-bottom: 3rem;
+
+    @media (min-width: $breakpointMd) {
+      padding-top: 3rem;
+    }
+  }
+}

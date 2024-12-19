@@ -1,0 +1,55 @@
+/*
+ * Mobile Buttons
+ */
+
+.mobileButtons {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffffff;
+
+  &__inner {
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    width: min(100%, 24rem);
+    margin: 0 auto;
+    padding: 0.75rem 0;
+
+    @media (min-width: $breakpointMd) {
+      display: none;
+    }
+  }
+
+  &__buttonWrap {
+    flex: 0 1 25vw;
+    height: fit-content;
+    aspect-ratio: 1;
+  }
+
+  &__button {
+    display: block;
+    height: 100%;
+
+    &.--line {
+      background: url("./assets/images/btn_line.png") no-repeat 50% 50% / contain scroll;
+    }
+
+    &.--mitsumori {
+      background: url("./assets/images/btn_mitsumori.png") no-repeat 50% 50% / contain scroll;
+    }
+
+    &.--raiten {
+      background: url("./assets/images/btn_raiten.png") no-repeat 50% 50% / contain scroll;
+    }
+
+    &.--tel {
+      background: url("./assets/images/btn_tel.png") no-repeat 50% 50% / contain scroll;
+    }
+  }
+}

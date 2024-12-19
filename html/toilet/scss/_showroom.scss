@@ -1,0 +1,69 @@
+/*
+ * Showroom
+ */
+
+.showroom {
+  @extend %__section;
+
+  &__inner {
+    @extend %__inner;
+  }
+
+  &__heading {
+    margin-bottom: 0;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    background-color: #fa6400;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  &__container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    width: min(100%, 45rem);
+    margin: 0 auto;
+    padding: 0.75rem;
+  }
+
+  &__image {
+    flex: 0 0 18rem;
+  }
+
+  &__content {
+    flex: 0 1 24rem;
+  }
+
+  &__lead {
+    margin: 0 0 0.75rem;
+    padding: 0.75rem;
+    background-color: #ced1e2;
+    color: #08186e;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  &__shop {
+    margin: 0.75rem 0;
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+
+  &__info {
+    margin: 0.75rem 0;
+    font-size: 1rem;
+  }
+
+  &__access {
+    width: 100%;
+    height: 18rem;
+  }
+}

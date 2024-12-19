@@ -1,0 +1,17 @@
+// Variables
+
+$bodyBg:         #ffffff;
+$bodyColor:      #333333;
+
+$breakpointSm:   600px;
+$breakpointMd:   750px;
+$breakpointLg:   900px;
+
+// Slider
+$sliderAspectRatioSm:  2 / 3;
+$sliderAspectRatioMd:  7 / 8;
+$sliderHeights:        (
+  sm:                    36rem, // feature
+  md:                    18rem  // review
+);
+$sliderCaptionHeight:  9rem;

@@ -1,0 +1,19 @@
+/*
+ * Footer
+ */
+
+.footer {
+  margin-bottom: 7.5rem; // Mobile Buttons
+  padding: 3rem 0;
+  background-color: #08186e;
+  text-align: center;
+
+  @media (min-width: $breakpointMd) {
+    margin-bottom: 0;
+  }
+
+  &__copyright {
+    color: #ffffff;
+    font-size: 1rem;
+  }
+}

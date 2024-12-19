@@ -1,0 +1,77 @@
+/*
+ * Product Feature
+ */
+
+.productFeature {
+  @extend %__section;
+
+  &__inner {
+    @extend %__inner;
+  }
+
+  &__heading {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    background-color: #4c45c2;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  &__tableWrap {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  &__table {
+    width: max(45rem, 100%);
+
+    tr {
+      border-bottom: 1px solid #d7d7d7;
+
+      &:first-child {
+        border-top: 1px solid #d7d7d7;
+      }
+    }
+
+    th, td {
+      width: 20%;
+      padding: 0.75rem 0;
+      border-right: 1px solid #d7d7d7;
+      font-weight: 700;
+      text-align: center;
+
+      &:first-child {
+        border-left: 1px solid #d7d7d7;
+      }
+    }
+
+    th {
+      background-color: #e2f5fc;
+      color: #7c7c7c;
+    }
+  }
+
+  &__sliderWrap {
+    position: relative;
+    width: min(100%, 54rem);
+    margin: 3rem auto 0;
+    border: 1px solid #d7d7d7;
+    overflow: hidden;
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      padding: 0.75rem;
+      background-color: #d7d7d7;
+      text-align: center;
+    }
+  }
+
+  &__sliderContainer {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
+}
