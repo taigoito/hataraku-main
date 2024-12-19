@@ -2,6 +2,12 @@
 <?php
 $kbn = getParameter("kbn", "1");
 
+if($kbn == "3") {
+	$url = 'https://hrsn.jp/toilet/';
+	header('Location: ' . $url, true, 301);
+	exit;
+}
+
 if($kbn == "4") {
 	$url = 'https://hrsn.jp/ecocute/';
 	header('Location: ' . $url, true, 301);
