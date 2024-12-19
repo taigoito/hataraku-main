@@ -1,0 +1,23 @@
+/*
+ * Review
+ */
+
+.review {
+  @extend %__section;
+  background-color: #ccedf9;
+
+  &__heading {
+    margin: 0 0 3rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-align: center;
+
+    span {
+      display: inline-block;
+    }
+  }
+
+  &__sliderWrap {
+    position: relative;
+  }
+}

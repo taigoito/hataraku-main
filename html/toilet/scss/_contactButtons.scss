@@ -1,0 +1,53 @@
+/*
+ * Contact Buttons
+ */
+
+.contactButtons {
+  &__inner {
+    @extend %__inner;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    @media (min-width: $breakpointMd) {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__button {
+    display: block;
+    height: 7.5rem;
+    margin: 1.5rem auto;
+
+    @media (min-width: $breakpointMd) {
+      flex: 1 1 10.5rem;
+
+    }
+
+    &.--line {
+      background: url("./assets/images/line.png") no-repeat 50% 50% / contain scroll;
+
+      &:hover {
+        background-image: url("./assets/images/line_mo.png");
+      }
+    }
+
+    &.--mitsumori {
+      background: url("./assets/images/mitsumori.png") no-repeat 50% 50% / contain scroll;
+
+      &:hover {
+        background-image: url("./assets/images/mitsumori_mo.png");
+      }
+    }
+
+    &.--raiten {
+      background: url("./assets/images/raiten.png") no-repeat 50% 50% / contain scroll;
+
+      &:hover {
+        background-image: url("./assets/images/raiten_mo.png");
+      }
+    }
+  }
+}

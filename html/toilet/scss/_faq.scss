@@ -1,0 +1,67 @@
+/*
+ * FAQ
+ */
+
+.faq {
+  @extend %__section;
+
+  &__inner {
+    @extend %__inner;
+  }
+
+  &__heading {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    background-color: #08186e;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  &__table {
+    width: 100%;
+    font-size: 0.75rem;
+
+    @media (min-width: $breakpointMd) {
+      font-size: 1rem;
+    }
+
+    tr:nth-child(2n-1) {
+      th {
+        padding-top: 0.75rem;
+        padding-right: 1.5rem;
+        color: #08186e;
+        font-weight: 700;
+        font-size: 225%;
+        text-align: center;
+        vertical-align: baseline;
+      }
+
+      td {
+        padding-top: 0.75rem;
+        font-size: 150%;
+      }
+    }
+
+    tr:nth-child(2n) {
+      border-bottom: 1px solid #bdbdbd;
+      
+      th {
+        padding-right: 1.5rem;
+        padding-bottom: 1.5rem;
+        color: #b5bad3;
+        font-weight: 700;
+        font-size: 150%;
+        text-align: center;
+        vertical-align: baseline;
+      }
+
+      td {
+        padding-bottom: 1.5rem;
+        font-size: 100%;
+      }
+    }
+  }
+}

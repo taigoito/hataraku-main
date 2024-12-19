@@ -1,0 +1,54 @@
+/*
+ * Main Visual
+ */
+
+.mainVisual {
+  padding-bottom: min(5.76vw, 3rem); // badgeはみ出し分と等しく
+  background: linear-gradient(#ccedf9 0%, #ccedf9 60%, #4c45c2 60%, #4c45c2 100%);
+
+  &__image {
+    @extend %__inner;
+    display: block;
+    margin-bottom: min(5.76vw, 3rem); // badgeはみ出し分
+    padding: 0; // 打消し
+  }
+
+  &__badges {
+    @extend %__inner;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1%;
+  }
+
+  &__badgeContent {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex: 0 1 32%;
+    height: fit-content;
+    aspect-ratio: 6 / 5;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #08186e;
+    font-weight: 700;
+    font-size: min(3.84vw, 2.4rem); // 1000px時38.4pxで最大
+    line-height: 1.2;
+    text-align: center;
+
+    p {
+      margin: min(1.92vw, 1.2rem) 0; // font-sizeの半分
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: max(-5.76vw, -3rem); // badgeはみ出し分
+    left: 0;
+    right: 0;
+    width: min(57.5%, 10.5rem);
+    margin: auto;
+  }
+}

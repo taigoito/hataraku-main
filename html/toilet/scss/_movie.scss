@@ -1,0 +1,19 @@
+/*
+ * Movie
+ */
+
+.movie {
+  background-color: #08186e;
+
+  @media (min-width: $breakpointMd) {
+    padding: 6rem 0;
+  }
+
+  iframe {
+    @extend %__inner;
+    display: block;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    padding: 0; // 打消し
+  }
+}

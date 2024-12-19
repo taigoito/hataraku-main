@@ -1,0 +1,40 @@
+/*
+ * Section
+ */
+
+%__section {
+  padding: 1.5rem 0;
+
+  @media (min-width: $breakpointMd) {
+    padding: 3rem 0;
+  }
+}
+
+%__inner {
+  width: min(100%, 63rem); // 1008px 左右24pxずつpaddingで、内寸960px
+  margin: auto;
+  padding: 0 clamp(0.75rem, 2.5%, 1.5rem);
+}
+
+%__heading {
+  position: relative;
+  margin: 2.25rem 0 3rem;
+  color: #08186e;
+  font-weight: 700;
+  font-size: min(7.2vw, 3rem);
+  line-height: 1.44;
+  text-align: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    right: 0;
+    display: block;
+    width: min(18vw, 7.5rem);
+    height: min(1.2vw, 0.5rem);
+    margin: auto;
+    background-color: #fa6400;
+  }
+}
